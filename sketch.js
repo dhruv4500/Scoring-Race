@@ -120,8 +120,8 @@ function draw(){
     
     fill("red");
     text("Game Over", 200,250,textSize(50));
-   text("Press R To restart", 230, 300, textSize(20));
     if(chance!==0){
+      text("Press R To restart", 230, 300, textSize(20));
       if(keyDown("r")){
         score=0;
         gameState=PLAY;
