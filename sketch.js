@@ -117,10 +117,11 @@ function draw(){
   } else  if(gameState===END){
     distance=0;
     //camera.zoom=1.1;
+    chance-=1;
     
     fill("red");
     text("Game Over", 200,250,textSize(50));
-    if(chance>0.5){
+    if(chance==1||chance==2||chance==3||chance==4|chance=5){
        text("Press R To restart", 230, 300, textSize(20));
       
     }
@@ -129,7 +130,6 @@ function draw(){
         score=0;
         gameState=PLAY;
         background.y=-2300;
-        chance-=1;
   }
   } 
       
