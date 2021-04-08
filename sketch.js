@@ -121,8 +121,7 @@ function draw(){
     
     fill("red");
     text("Game Over", 200,250,textSize(50));
-    if(chance==1||chance==2||chance==3||chance==4|chance=5){
-       text("Press R To restart", 230, 300, textSize(20));
+       text("Press R To restart IF Chance is not equal to 0", 230, 300, textSize(20));
       
     }
     if(chance!==0){
