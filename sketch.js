@@ -69,7 +69,7 @@ function draw(){
   if(highScore<score){
     highScore=score;
   }
-
+ 
   
   if(gameState===PLAY){
     car.visible=true;
@@ -109,7 +109,7 @@ function draw(){
     if(isTouching(car,obstaclesGroup)){
      car.visible=false;
       obstaclesGroup.destroyEach();
-       gameState=END;
+      gameState=END;
       
     }
      drawSprites();
@@ -117,20 +117,19 @@ function draw(){
   } else  if(gameState===END){
     distance=0;
     //camera.zoom=1.1;
-    chance-=1;
-    
+
     fill("red");
-    text("Game Over", 200,250,textSize(50));
-       text("Press R To restart IF Chance is not equal to 0", 230, 300, textSize(20));
-      
-    }
-    if(chance!==0){
+    text("Game Over", 190,250,textSize(50));
+   text("Press R To restart if Chance Left is no 0", 135, 300, textSize(20));
+   if(chance!==0){
       if(keyDown("r")){
         score=0;
         gameState=PLAY;
         background.y=-2300;
+        chance-=1;
   }
-  } 
+}
+      
       
     }
   
@@ -138,5 +137,4 @@ function draw(){
   text("Score: "+score, 100, 40, textSize(30));
   text("Highest Score: "+highScore, 310,40,textSize(30));
   text("Chances Left "+chance,310,80,textSize(30));
-  
 }
